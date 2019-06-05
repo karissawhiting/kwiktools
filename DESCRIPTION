@@ -17,4 +17,7 @@ Imports:
     stringr,
     dplyr,
     purrr,
-    tools
+    tools,
+    gt,
+    gtsummary,
+    magrittr
