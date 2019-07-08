@@ -3,4 +3,5 @@
 export("%>%")
 export(gt_default)
 export(gtsum_default)
+export(names_to_labs)
 importFrom(magrittr,"%>%")
