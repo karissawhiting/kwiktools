@@ -18,7 +18,6 @@ names_to_labels <- function(df, caps = NULL) {
     tools::toTitleCase(.)
 
   if (!is.null(caps)) {
-    print(caps)
     named_vec <- toupper(caps)
     names(named_vec) <- tolower(caps)
     labels <- stringr::str_replace_all(tolower(labels), named_vec)
