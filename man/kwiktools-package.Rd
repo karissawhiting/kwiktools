@@ -4,7 +4,7 @@
 \name{kwiktools-package}
 \alias{kwiktools}
 \alias{kwiktools-package}
-\title{kwiktools: function dumpster}
+\title{kwiktools: What the Package Does (One Line, Title Case)}
 \description{
 What the package does (one paragraph).
 }

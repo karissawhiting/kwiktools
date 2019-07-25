@@ -17,12 +17,12 @@ names_to_labs <- function(df, caps = NULL) {
     names(named_vec) <- tolower(caps)
   }
 
-  labels <- str_replace_all(names, "_", " ") %>%
+  labels <- string::str_replace_all(names, "_", " ") %>%
     tolower(.) %>%
     tools::toTitleCase(.) %>%
     purrr::when(!is.null(caps), ~stringr::str_replace_all(tolower(.), named_vec))
 
   return(labels)
 }
-names_to_labs(df, caps = c("Sepal", "Petal"))
+
 
