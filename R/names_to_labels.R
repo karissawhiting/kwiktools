@@ -19,13 +19,13 @@ names_to_labels <- function(df, caps = NULL) {
 
   if (!is.null(caps)) {
     named_vec <- toupper(caps)
-    names(named_vec) <- tolower(caps)
-    labels <- stringr::str_replace_all(tolower(labels), named_vec)
+    names(named_vec) <- tools::toTitleCase(tolower(caps))
+    labels <- stringr::str_replace_all(tools::toTitleCase(labels), named_vec)
   }
 
   return(labels)
 }
 
 
-
+names_to_labels(iris)
 
