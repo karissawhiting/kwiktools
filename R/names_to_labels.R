@@ -27,5 +27,3 @@ names_to_labels <- function(df, caps = NULL) {
 }
 
 
-names_to_labels(iris)
-
