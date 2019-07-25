@@ -10,19 +10,23 @@
 
 # function to transform names of a dataframe to friendly labels
 names_to_labels <- function(df, caps = NULL) {
-  names <- names(df)
 
-  if (!is.null(caps)) {
-    named_vec <- c(toupper(caps))
-    names(named_vec) <- tolower(caps)
-  }
+  names <- names(df)
 
   labels <- stringr::str_replace_all(names, "_", " ") %>%
     tolower(.) %>%
-    tools::toTitleCase(.) %>%
-    purrr::when(!is.null(caps), ~stringr::str_replace_all(tolower(.), named_vec))
+    tools::toTitleCase(.)
+
+  if (!is.null(caps)) {
+    print(caps)
+    named_vec <- toupper(caps)
+    names(named_vec) <- tolower(caps)
+    labels <- stringr::str_replace_all(tolower(labels), named_vec)
+  }
 
   return(labels)
 }
+
+
 
 
