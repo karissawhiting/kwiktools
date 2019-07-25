@@ -20,7 +20,7 @@ names_to_labs <- function(df, caps = NULL) {
   labels <- str_replace_all(names, "_", " ") %>%
     tolower(.) %>%
     tools::toTitleCase(.) %>%
-    purrr::when(!is.null(caps), ~str_replace_all(tolower(.), named_vec))
+    purrr::when(!is.null(caps), ~stringr::str_replace_all(tolower(.), named_vec))
 
   return(labels)
 }
