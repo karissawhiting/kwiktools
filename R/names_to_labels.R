@@ -9,7 +9,7 @@
 # labelling funs-------------------------------------------------------------
 
 # function to transform names of a dataframe to friendly labels
-names_to_labs <- function(df, caps = NULL) {
+names_to_labels <- function(df, caps = NULL) {
   names <- names(df)
 
   if (!is.null(caps)) {
