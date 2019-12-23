@@ -10,7 +10,7 @@ gt_default <- function(df, custom_caption = NULL) {
     gt::gt() %>%
     gt::tab_options(
       table.font.size = "small",
-      row.padding = gt::px(1)) %>%
+      data_row.padding = gt::px(1)) %>%
     gt::tab_header(custom_caption)
 }
 
@@ -23,11 +23,11 @@ gt_default <- function(df, custom_caption = NULL) {
 gtsum_default <- function(tbl_obj, custom_caption = NULL) {
 
   tbl_obj %>%
-    gtsummary::tab_style_bold_labels() %>%
-    gtsummary::tab_style_italicize_levels() %>%
+    gtsummary::bold_labels() %>%
+    gtsummary::italicize_levels() %>%
     gtsummary::as_gt() %>%
     gt::tab_options(
       table.font.size = "small",
-      row.padding = gt::px(1)) %>%
+      dat_row.padding = gt::px(1)) %>%
     gt::tab_header(custom_caption)
 }
