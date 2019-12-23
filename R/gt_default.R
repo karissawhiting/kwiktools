@@ -28,6 +28,6 @@ gtsum_default <- function(tbl_obj, custom_caption = NULL) {
     gtsummary::as_gt() %>%
     gt::tab_options(
       table.font.size = "small",
-      dat_row.padding = gt::px(1)) %>%
+      data_row.padding = gt::px(1)) %>%
     gt::tab_header(custom_caption)
 }
