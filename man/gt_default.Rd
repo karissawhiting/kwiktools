@@ -8,6 +8,8 @@ gt_default(df, custom_caption = NULL)
 }
 \arguments{
 \item{df}{a data frame}
+
+\item{custom_caption}{a table title}
 }
 \description{
 GT Default Display

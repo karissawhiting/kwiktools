@@ -2,6 +2,7 @@
 #' GT Default Display
 #'
 #' @param df a data frame
+#' @param custom_caption a table title
 #' @export
 #'
 gt_default <- function(df, custom_caption = NULL) {
@@ -18,6 +19,7 @@ gt_default <- function(df, custom_caption = NULL) {
 #' GT Default Display for Table Summary/Regression Obj
 #'
 #' @param tbl_obj a tbl_summary or tbl_regression object
+#' @param custom_caption a table title
 #' @export
 #'
 gtsum_default <- function(tbl_obj, custom_caption = NULL) {

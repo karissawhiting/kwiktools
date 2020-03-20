@@ -8,6 +8,8 @@ gtsum_default(tbl_obj, custom_caption = NULL)
 }
 \arguments{
 \item{tbl_obj}{a tbl_summary or tbl_regression object}
+
+\item{custom_caption}{a table title}
 }
 \description{
 GT Default Display for Table Summary/Regression Obj

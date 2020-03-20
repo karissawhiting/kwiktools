@@ -3,6 +3,6 @@
 export("%>%")
 export(gt_default)
 export(gtsum_default)
-export(make_labels)
 export(names_to_labels)
+export(save_date)
 importFrom(magrittr,"%>%")
