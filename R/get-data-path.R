@@ -14,7 +14,7 @@
 #' @param subdir Subdirectory within the repo containing the file.
 #'   Defaults to \code{"data"}.
 #' @param repo_name Name of the repository folder on the server.
-#'   Defaults to \code{"mtor-sarcoma-clustering"}.
+#'   Defaults to the current project root directory name via \code{here::here()}.
 #' @param server_base Base path to the server. Defaults to the value of the
 #'   \code{SERVER_BASE} environment variable.
 #'
@@ -30,7 +30,7 @@
 #' }
 #' @export
 
-get_data_path <- function(filename, subdir = "data", repo_name = "mtor-sarcoma-clustering",
+get_data_path <- function(filename, subdir = "data", repo_name = basename(here::here()),
                           server_base = Sys.getenv("SERVER_BASE")) {
   if (nzchar(server_base)) {
     server_base <- file.path(server_base, repo_name)

@@ -7,7 +7,7 @@
 get_data_path(
   filename,
   subdir = "data",
-  repo_name = "mtor-sarcoma-clustering",
+  repo_name = basename(here::here()),
   server_base = Sys.getenv("SERVER_BASE")
 )
 }
@@ -18,7 +18,7 @@ get_data_path(
 Defaults to \code{"data"}.}
 
 \item{repo_name}{Name of the repository folder on the server.
-Defaults to \code{"mtor-sarcoma-clustering"}.}
+Defaults to the current project root directory name via \code{here::here()}.}
 
 \item{server_base}{Base path to the server. Defaults to the value of the
 \code{SERVER_BASE} environment variable.}
