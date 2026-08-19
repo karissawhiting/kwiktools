@@ -23,5 +23,7 @@ Wrapper for \code{load()} and \code{readr::read_csv()} that
 saves a RData or csv with today's date appended to filename
 }
 \examples{
-save_date(df, here::here("data", "patients.RData"))
+\dontrun{
+load_most_recent(here::here("data"), filename_keyword = "patients")
+}
 }

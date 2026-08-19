@@ -8,6 +8,7 @@ get_data_path(
   filename,
   subdir = "data",
   repo_name = basename(here::here()),
+  data_date = NULL,
   server_base = Sys.getenv("SERVER_BASE")
 )
 }
@@ -19,6 +20,10 @@ Defaults to \code{"data"}.}
 
 \item{repo_name}{Name of the repository folder on the server.
 Defaults to the current project root directory name via \code{here::here()}.}
+
+\item{data_date}{Optional date string (e.g. \code{"2026-08-19"}) to insert
+into \code{filename} just before its extension, regardless of extension
+type (\code{.rds}, \code{.RData}, \code{.csv}, \code{.xlsx}, etc.).}
 
 \item{server_base}{Base path to the server. Defaults to the value of the
 \code{SERVER_BASE} environment variable.}
@@ -33,7 +38,7 @@ otherwise falls back to a local path via \code{here::here()}.
 }
 \details{
 The server base path is read from the \code{SERVER_BASE} environment variable
-(e.g. set in \code{.Renviron} as \code{SERVER_BASE=/Volumes/BSTShared/...}).
+(e.g. set in \code{.Renviron} as \code{SERVER_BASE=/path/to/server/share}).
 If the environment variable is not set, \code{server_base} must be supplied
 directly.
 }
@@ -43,6 +48,6 @@ directly.
 path <- get_data_path("patients.RData")
 
 # Or pass the base path directly:
-path <- get_data_path("patients.RData", server_base = "/Volumes/BSTShared/...")
+path <- get_data_path("patients.RData", server_base = "/path/to/server/share")
 }
 }

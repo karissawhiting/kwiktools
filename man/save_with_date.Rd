@@ -18,5 +18,7 @@ Wrapper for \code{save()} and \code{readr::write_csv()} that
 saves a RData or csv with today's date appended to filename
 }
 \examples{
+\dontrun{
 save_with_date(df, here::here("data", "patients.RData"))
+}
 }
