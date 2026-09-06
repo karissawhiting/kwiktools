@@ -1,13 +1,14 @@
 Package: kwiktools
-Title: What the Package Does (One Line, Title Case)
+Title: Small Utilities for Everyday Data Analysis Tasks
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     person(given = "Karissa",
            family = "Whiting",
            role = c("aut", "cre"),
            email = "karissa.whiting@gmail.com",
            comment = c(ORCID = "0000-0002-4683-1868"))
-Description: What the package does (one paragraph).
+Description: A collection of small utility functions for common data
+    analysis tasks and workflows.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

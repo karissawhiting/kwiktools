@@ -51,3 +51,23 @@ Converts data frame column names (e.g. `snake_case`) into friendly, title-case l
 ``` r
 names_to_labels(df)
 ```
+
+Since it returns a plain character vector of labels (in column order), pair it with `labelled::set_variable_labels()` to attach those labels back onto the data frame:
+
+``` r
+df <- df %>%
+  labelled::set_variable_labels(.labels = names_to_labels(df))
+```
+
+### `gt_default()` / `gtsum_default()`
+
+Apply consistent default styling to `gt` tables and `gtsummary` (`tbl_summary`/`tbl_regression`) objects.
+
+``` r
+gt_default(df, custom_caption = "My Table")
+gtsum_default(tbl_obj, custom_caption = "My Regression Table")
+```
+
+## License
+
+MIT © Karissa Whiting
